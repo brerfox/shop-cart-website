@@ -22,10 +22,10 @@
     <div class="logo"> Shop<strong>Online</strong></div>
     <div class="menu">
       <ul class="solidblockmenu">
-        <li><a href="dashboard.jsp">Dashboard</a></li>
-        <li><a href="http://all-free-download.com/free-website-templates/">Products</a></li>
+        <li><a href="adminportal.jsp">Dashboard</a></li>
+        <li><a href="adminproduct.jsp">Products</a></li>
         <li><a href="orderpage.jsp">Orders</a></li>
-        <li><a href="http://all-free-download.com/free-website-templates/">Payments</a></li>
+        <li><a href="payments.jsp">Payments</a></li>
         <li><a href="http://all-free-download.com/free-website-templates/">Offers & Discounts</a></li>
         <li><a href="editproduct.jsp">Add New Products</a></li>
       </ul>

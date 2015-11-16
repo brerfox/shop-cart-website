@@ -16,16 +16,16 @@
 <link href="../css/style-ie.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 </head>
-<body>
+    <body>
 <center>
   <div class="wrapper">
     <div class="logo"> Shop<strong>Online</strong></div>
     <div class="menu">
       <ul class="solidblockmenu">
-        <li><a href="dashboard.jsp">Dashboard</a></li>
-        <li><a href="http://all-free-download.com/free-website-templates/">Products</a></li>
+        <li><a href="adminportal.jsp">Dashboard</a></li>
+        <li><a href="adminproduct.jsp">Products</a></li>
         <li><a href="orderpage.jsp">Orders</a></li>
-        <li><a href="http://all-free-download.com/free-website-templates/">Payments</a></li>
+        <li><a href="payments.jsp">Payments</a></li>
         <li><a href="http://all-free-download.com/free-website-templates/">Offers & Discounts</a></li>
         <li><a href="editproduct.jsp">Add New Products</a></li>
       </ul>
@@ -64,11 +64,11 @@
     <div style="float: none">
         <table cols="2" align="center">       
         <form action="../api/updateproduct.jsp" name="upproduct">
-            <tr><td><u><b>Name:</b></u>&nbsp;</td><td> <input type="text" name="pname" value="<%= productName%>" /> <br></td></tr>
-            <tr><td><u><b>Price:</b></u>&nbsp;</td><td> <input type="text" name="pprice" value="<%= productPrice%>" /> <br></td></tr>
-            <tr><td><u><b>Availability:</b></u>&nbsp;</td><td> <input type="text" name="avail" value="<%= avail%>" /> <br></td></tr>
-            <tr><td><u><b>Category:</b></u>&nbsp;</td><td> <input type="text" name="cat" value="<%= cat%>"/> <br></td></tr>
-            <tr><td><u><b>Description:</b></u>&nbsp;</td><td> <textarea name="desc" rows="4" cols="10"><%= productDescription%></textarea> <br></td></tr>
+            <tr><td><u><b>Name:</b></u>&nbsp;</td><td> <input type="text" name="pname" placeholder="sample product"/> <br></td></tr>
+            <tr><td><u><b>Price:</b></u>&nbsp;</td><td> <input type="text" name="pprice" placeholder="sample price" /> <br></td></tr>
+            <tr><td><u><b>Availability:</b></u>&nbsp;</td><td> <input type="text" name="avail" placeholder="sample stock" /> <br></td></tr>
+            <tr><td><u><b>Category:</b></u>&nbsp;</td><td> <input type="text" name="cat" placeholder="sample category"/> <br></td></tr>
+            <tr><td><u><b>Description:</b></u>&nbsp;</td><td> <textarea name="desc" rows="4" cols="10"></textarea> <br></td></tr>
             <tr><td><u><b>Add Image:</b></u>&nbsp;</td><td> <input type="image" name="img"/><br></td></tr>
             <tr><td><input type="submit" name="submit" value="Add" /></td></tr>
        

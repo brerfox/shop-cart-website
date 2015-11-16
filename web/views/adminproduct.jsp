@@ -92,12 +92,12 @@ ul.rig.columns-4 li {
     <div class="logo"> Shop<strong>Online</strong></div>
     <div class="menu">
       <ul class="solidblockmenu">
-        <li><a href="http://all-free-download.com/free-website-templates/">Home</a></li>
-        <li><a href="category.jsp">Categories</a></li>
-        <li><a href="products.jsp">Products</a></li>
-        <li><a href="deals.jsp">Hot Deals</a></li>
-        <li><a href="order.jsp">Place Order</a></li>
-        <li><a href="add_to_cart.jsp">Add to Cart</a></li>
+        <li><a href="adminportal.jsp">Dashboard</a></li>
+        <li><a href="adminproduct.jsp">Products</a></li>
+        <li><a href="orderpage.jsp">Orders</a></li>
+        <li><a href="payments.jsp">Payments</a></li>
+        <li><a href="http://all-free-download.com/free-website-templates/">Offers & Discounts</a></li>
+        <li><a href="editproduct.jsp">Add New Products</a></li>
       </ul>
       <div class="clear"></div>
     </div>
@@ -139,7 +139,7 @@ ul.rig.columns-4 li {
         out.println("/>");
         }
         out.println("<h3>");
-        out.println("<a href='product_display.jsp?id=");
+        out.println("<a href='adminproduct_display.jsp?id=");
         out.println(productId);
         out.println("'>");
         out.println(productName);

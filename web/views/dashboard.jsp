@@ -28,17 +28,24 @@ try
 // Test the DB connection by making an empty table
 String checkQuery = "SELECT COUNT(*) FROM product_table";
 
+String checkQuery1 = "SELECT COUNT(*) AS PR_C FROM order_detail_table WHERE order_date > ?;";
+
 Class.forName( driver );
 // initialize the Connection, with our DB info ...
 Connection con = DriverManager.getConnection( url, name, pass );
+PreparedStatement stat1 = con.prepareStatement(checkQuery1);
 Statement stat = con.createStatement();
 %>
 <%
 ResultSet rs = stat.executeQuery(checkQuery);
-System.out.println("HELLO!!");
+java.util.Date tempDate = new java.util.Date();
+java.sql.Date currentDate = new java.sql.Date(tempDate.getTime() - 7*24*60*60*1000);
+stat1.setDate(1, currentDate);
+ResultSet rs1 = stat1.executeQuery();
 rs.next();
 int count = rs.getInt(1);
-System.out.println("Total No. of Products: "+count); 
+rs1.next();
+int deliveryCount = rs1.getInt("PR_C");
 
 /*if(rs.next()){
     
@@ -50,7 +57,7 @@ else{
 }*/
 %>
 <h3>Total No. of Products: </h3><%= count%>
-<h3>No. of Recent Orders: </h3>
+<h3>No. of Recent Orders: </h3> <%= deliveryCount %>
 
 <%
 // close connection
